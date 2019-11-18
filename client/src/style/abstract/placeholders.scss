@@ -1,0 +1,56 @@
+%small {
+  font-size: .75rem;
+  font-weight: normal;
+}
+
+%p {
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+%h2 {
+  font-size: 1.125rem;
+  font-weight: bold;
+}
+
+%h3 {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+%h4 {
+  font-size: .875rem;
+  font-weight: normal;
+}
+
+%round {
+  border-radius: $border-radius;
+}
+
+%button {
+  background-color: $c-dark;
+  border: none;
+  height: 2rem;
+  padding: 0 2rem;
+  margin: 0 1rem;
+  @include easeOut;
+  &:disabled {
+    cursor: default;
+  }
+  
+  &:hover,
+  &:focus {
+    background-color: $c-active;
+  }
+}
+
+%dropdown-button {
+  @extend %button;
+  background-color: $c-neutral;
+  color: $c-darkest;
+
+  &:hover,
+  &:focus {
+    background-color: $c-active;
+  }
+}

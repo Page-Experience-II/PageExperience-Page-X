@@ -1,0 +1,127 @@
+@import '../../style/abstract/abstract';
+
+.left {
+  padding-right: 1rem;
+  
+  &__avatar {
+    width: 12.5rem;
+    height: 12.5rem;
+    
+    object-fit: cover;
+    border-radius: $border-radius;
+    &:hover{
+      opacity: 0.25
+    }
+  }
+  &__avatarhome {
+    width: 12.5rem;
+    height: 12.5rem;
+    
+    object-fit: cover;
+    border-radius: $border-radius;
+  }
+  &__username {
+    @extend %h2;
+    color: $c-darkest;
+    margin-top: 1rem;
+  }
+  &__description {
+    @extend %p;
+    color: $c-darkest;
+    margin: 1rem 0;
+  }
+}
+.btn-container  {
+  width: 12.5rem;
+}
+.img-box {
+      position: relative;
+      text-align: center;
+      display: block;
+      overflow: hidden;
+  }
+  .img-content {
+      padding: 20px;
+      background: transparent;
+      position: absolute;
+      bottom: -200px;
+      width: 100%;
+      box-sizing: border-box;
+      transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+  }
+  .img-box:hover .img-content{
+    bottom: 0px;
+    background-color: rgba(91, 91, 103, 0.7);
+    transition: all 0.2s ease-in-out;
+      -webkit-transition: all 0.2s ease-in-out;
+      -moz-transition: all 0.2s ease-in-out;
+      background-image: url('edit-icon.png');
+      background-repeat: no-repeat;
+      background-position:center;
+  }
+
+
+.left-meta {
+  margin-top: -.5rem;
+  color: $c-dark;
+  @extend %p;
+  
+  &__icon {
+    width: 1.5rem;
+    margin-right: .5rem;
+    margin-top: .5rem;
+    display: inline-block;
+  }
+  &__fa {}
+}
+
+.people-wrapper {
+  margin-top: 2rem;
+}
+
+.people {
+  margin: 1rem 0;
+  
+  &__heading {
+    max-width: calc(4rem * 3);
+    padding-right: 1rem;
+  }
+  &__title {
+    @extend %h3;
+    color: $c-darkest;
+    margin-bottom: 1rem;
+  }
+  &__all {
+    @extend %small;
+    color: $c-active;
+    text-transform: uppercase;
+    @include easeOut;
+    
+    &:hover,
+    &:focus {
+      color: $c-neutral;
+    }
+  }
+}
+
+.people-avatars {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -1rem;
+  margin-bottom: -1rem;
+  max-width: calc(4rem * 3);
+  
+  &__figure {
+    margin-right: 1rem;
+    margin-bottom: 1rem;
+  }
+  &__image {
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: $border-radius;
+    object-fit: cover;
+  }
+}

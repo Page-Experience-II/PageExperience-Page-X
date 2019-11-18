@@ -1,0 +1,103 @@
+@import '../../style/abstract/abstract';
+
+.content-card {
+  background-color: $c-lightest;
+  border: none;
+  border-radius: $border-radius;
+  box-shadow: 1px 2px 2px 1px lightgrey;
+  padding: 1rem;
+  margin-top: 2rem;
+  position: relative;
+  
+  &__avatar {
+    object-fit: cover;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: $border-radius;
+    margin-right: 1rem;
+  }
+  &__username {
+    @extend %h3;
+    color: $c-darkest;
+    cursor: pointer;
+  }
+  &__date {
+    @extend %small;
+    color: $c-dark;
+  }
+  &__button {
+    position: absolute;
+    right: 0; top: .5rem;
+    margin-top: -1rem;
+  }
+  &__icon {
+    color: $c-darkest;
+    @include easeOut;
+    
+    &:hover {
+      color: $c-active;
+    }
+  }
+  &__public {
+    @extend %small;
+    color: $c-darkest;
+  }
+  &__text {
+    @extend %p;
+    color: $c-darkest;
+  }
+  &__image {
+    margin-top: 1rem;
+  }
+  &__video {
+    margin-top: 1rem;
+    &.video-thumbnail {
+      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      min-height: 10rem;
+      height: auto;
+      text-align: center;
+
+      .fallback {
+        font-size: 10rem;
+        left: calc(50% - 5rem);
+      }
+    }
+  }
+}
+
+.content-card-footer {
+  &__item {
+    margin: 0 -.5rem;
+  }
+  &__button {
+    @extend %h4;
+    font-weight: bold;
+    background: none;
+    border: none;
+    color: $c-darkest;
+    @include easeOut;
+    margin: 0 .2rem;
+    
+    &:hover {
+      color: $c-active;
+      background: none;
+      border: none;
+    }
+    &:focus{
+      box-shadow: none !important;
+    }
+  }
+}
+.like-done {
+  color: #a7aba7;
+}
+.count-value {
+    font-size: .875rem;
+    font-weight: bold;
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+}

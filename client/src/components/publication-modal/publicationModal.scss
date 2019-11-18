@@ -1,0 +1,14 @@
+@import "../../style/abstract/abstract";
+
+.publication-modal {
+  overflow: hidden;
+
+  .modal-header {
+    padding: 1rem;
+    background: $c-light;
+  }
+
+  .modal-body {
+    padding: 5px 0;
+  }
+}

@@ -1,0 +1,139 @@
+@import "../../style/abstract/abstract";
+
+.content {
+  .publication-form {
+    border: 1px solid $c-neutral;
+  }
+}
+
+.posting-card-wrapper {
+  border: none;
+}
+
+.posting-card {
+  &__control {
+    width: calc(100% - 4rem);
+  }
+  &__textarea {
+    @extend %p;
+
+    border-color: $c-neutral;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    color: $c-darkest;
+  }
+  &__button {
+    @extend %h3;
+    background-color: $c-dark;
+    border: none;
+    height: 2.5rem;
+
+    &:hover,
+    &:focus {
+      background-color: $c-active;
+    }
+  }
+  &__avatar {
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+
+    overflow: hidden;
+    border-radius: $border-radius;
+    object-fit: cover;
+  }
+}
+
+.members {
+  border-radius: $border-radius;
+
+  padding: 1rem;
+
+  &__title {
+    @extend %h3;
+    color: $c-darkest;
+    margin-bottom: 1rem;
+  }
+}
+
+.member {
+  padding: 3px;
+  border-top: 1px solid $c-light;
+
+  &:first-child {
+    border-top: none;
+  }
+
+  &__avatar {
+    object-fit: cover;
+    width: 3rem;
+    height: 3rem;
+    overflow: hidden;
+    border-radius: $border-radius;
+    margin-right: 1rem;
+  }
+  &__username {
+    @extend %h3;
+    color: $c-darkest;
+    margin: 0;
+  }
+}
+.member-img {
+  border-radius: $border-radius;
+  max-width: 90%;
+}
+.member-caption {
+  color: #4b6584;
+  font-weight: 600;
+  margin-left: 5px;
+  font-size: 12px;
+}
+.member-caption i {
+  margin-right: 5px;
+}
+
+.cover-pic-img-content {
+  padding: 10px !important;
+  background: transparent;
+  position: absolute;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+}
+.row-mem:hover .member-email a,.row-mem:hover .member-email svg {
+  color: #4b6584;
+}
+
+// .row-mem:hover .member-caption {
+//   color: white !important;
+// }
+
+// .row-mem:hover .member__username {
+//   background: #4b6584;
+// }
+
+.row-mem:hover .cover-pic-img-content {
+  bottom: 24px;
+  right: -76px;
+
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  background-image: url("cross1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+  cursor: pointer;
+}
+.mr-2r {
+  margin-right: 2rem !important;
+}
+
+.members__container .cover-pic-img-content {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+}

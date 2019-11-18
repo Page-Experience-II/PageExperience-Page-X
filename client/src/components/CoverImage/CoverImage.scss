@@ -1,0 +1,14 @@
+.picture-container {
+  margin: 0 auto;
+  overflow: hidden;
+  height: 300px !important;
+  position: relative;
+  width: 100%;
+}
+.picture-container img {
+  min-height: 100%;
+  min-width: 100%;
+}
+.picture-container img {
+  position: absolute;
+}

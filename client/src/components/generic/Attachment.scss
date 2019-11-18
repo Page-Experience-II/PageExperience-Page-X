@@ -1,0 +1,17 @@
+@import '../../style/abstract/abstract';
+
+.attachment {
+  &__button {
+    margin-right: 1rem;
+  }
+
+  &__label {
+    color: $c-dark;
+    @include easeOut;
+    
+    &:hover,
+    &:focus {
+      color: $c-active;
+    }
+  }
+}

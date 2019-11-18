@@ -1,0 +1,151 @@
+@import "../../style/abstract/abstract";
+
+.publication-form {
+  border-top: none;
+  border-bottom: none;
+  background-color: $c-lightest;
+  border-radius: $border-radius;
+  .card {
+    border-radius: 0;
+    border: 0;
+  }
+
+  .ql-container{
+    border-radius: 6px;
+    background: cornsilk;
+  }
+  .navbar-avatar {
+    margin-right: 1rem;
+    min-width: 3rem;
+    min-height: 3rem;
+    width: 3rem;
+    height: 3rem;
+  }
+
+  &__body {
+    padding: 1rem;
+  }
+
+  &__textarea {
+    height: 7rem;
+    resize: none;
+  }
+
+  &__attachments {
+    display: flex;
+    align-items: center;
+    padding: 0rem 1rem 0.5rem 5rem;
+  }
+
+  &__work-type {
+    margin-left: 0.5rem;
+
+    .dropdown-toggle::before {
+      content: "*";
+      color: red;
+      margin-right: 5px;
+      font-size: 16px;
+    }
+  }
+
+  &__control {
+    width: 100%;
+  }
+
+  .dropdown {
+    button {
+      background-color: #4b6584 !important;
+      background: #4b6584 !important;
+      color: white !important;
+      margin: 0;
+      width: 140px;
+    }
+    .dropdown-menu.show {
+      border-color: #4b6584 !important;
+      left: -20px !important;
+    }
+
+    &.access-type {
+      button {
+        float: right;
+        // padding: 0;
+        min-width: 120px;
+      }
+
+      .access-type__icon {
+        margin-right: 0.5rem;
+      }
+    }
+
+    .dropdown-item {
+      position: relative;
+      overflow: hidden;
+
+      .file-picker {
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        cursor: pointer;
+
+        &::-webkit-file-upload-button {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  .bbar {
+    border-top: 1px solid #ced4da;
+    padding: 1rem;
+  }
+
+  .publish-button__work,
+  .publish-button__update {
+    color: white !important;
+    background: #4b6584 !important;
+    font-size: .85rem;
+    &:hover:enabled {
+      background: #4b6584;
+    }
+    &:disabled {
+      border-color: #4b6584;
+      color: white;
+    }
+    margin: 0;
+    // min-width: 140px;
+    min-width: 115px;
+  }
+}
+
+.ql-picker-item[data-value="SansSerif"]::before {
+  content: "Sans Serif" !important;
+}
+
+.ql-picker-item[data-value="Serif"]::before {
+  content: "Serif" !important;
+}
+.ql-picker-item[data-value="Monospace"]::before {
+  content: "Monospace" !important;
+}
+
+.ql-font-Serif {
+  font-family: sans-serif !important;
+}
+
+.ql-font-Serif {
+  font-family: sans-serif !important;
+}
+
+.ql-font-Serif {
+  font-family: sans-serif !important;
+}
+
+.ql-font-Serif {
+  font-family: serif !important;
+}
+.ql-font-Monospace {
+  font-family: monospace !important;
+}

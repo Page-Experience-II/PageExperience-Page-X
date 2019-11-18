@@ -1,0 +1,134 @@
+@import "../../style/abstract/abstract";
+
+.header {
+  background-color: #4b6584 !important;
+  text-align: center;
+  text-align: -webkit-center;
+
+  .navbar-collapse {
+    text-align: left;
+
+    .form-inline {
+      position: relative;
+    }
+
+    .navbar-search-form {
+      width: 50vw;
+      min-width: 200px;
+    }
+
+    input {
+      width: 100%;
+      border: 0;
+      border-radius: 5px;
+    }
+    /* webkit solution */
+    ::-webkit-input-placeholder {
+      text-align: right;
+      color: #dcdcdc !important;
+    }
+    /* mozilla solution */
+    input:-moz-placeholder {
+      text-align: right;
+      color: #dcdcdc;
+    }
+
+    .search-icon {
+      position: absolute;
+      right: 60px;
+      bottom: 7px;
+    }
+
+    &.collapsing > *,
+    &.show > * {
+      padding-top: 5px;
+      padding-bottom: 5px;
+    }
+  }
+}
+
+.form-inline {
+  flex-flow: row nowrap;
+}
+
+.navbar {
+  padding: 0;
+  display: flex;
+  justify-content: center;
+
+  &__brand {
+    @extend %h2;
+    margin-right: 3rem;
+
+    &:hover {
+      color: $c-neutral;
+    }
+  }
+}
+
+.navbar-avatar {
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  border-radius: $border-radius;
+
+  &__image {
+    object-fit: cover;
+    height: 3rem;
+  }
+}
+
+.navbar-control {
+  &__button {
+    display: flex;
+    align-items: center;
+    @include easeOut;
+
+    &:hover {
+      color: white;
+
+      .navbar-control__icon {
+        background: white;
+      }
+    }
+  }
+  &__text {
+    @extend %h3;
+  }
+  &__icon {
+    margin-left: 0.25rem;
+    color: #4b6584;
+    font-size: 14px;
+
+    @include easeOut;
+  }
+}
+
+.navbar-right {
+  &__button {
+    margin-right: 0.5rem;
+    border: none;
+    @include easeOut;
+    background: none;
+    color: $c-neutral;
+    text-align: left;
+
+    &:hover {
+      background: none;
+      color: white;
+      border: none;
+    }
+  }
+}
+
+.navbar-dropdown {
+  @extend %h3;
+  color: $c-neutral !important;
+  background: none;
+  display: flex;
+  align-items: center;
+}
+
+.btn-text {
+  font-weight: 400;
+}
